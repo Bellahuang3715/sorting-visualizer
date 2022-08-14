@@ -1,7 +1,3 @@
-.App {
-  text-align: center;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +31,64 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+/* 
+.row {
+  text-align: center;
+
+}
+
+.column {
+  float: left;
+  padding: 10px;
+}
+
+.left {
+  width: 75%;
+}
+
+.right {
+  width: 25%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+} */
+
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 100%;
+}
+
+.box {
+  color: black;
+  padding: 1em;
+  /* float: left; */
+  height: 600px;
+}
+
+.visualizer {
+  box-sizing: border-box;
+  height: 80%;
+}
+
+/* .left {
+  background-color: red;
+}
+
+.right {
+  background-color: green;
+} */
+
+
+
+
+.algorithm-selector {
+  height: 200px;
 }
