@@ -54,11 +54,17 @@ function selectionSortHelper(array, len, animations) {
     for (let j = i + 1; j < len; j++) {
       animations.push([i, j]);
       animations.push([i, j]);
+      if (j !== (len-1)) {
+        animations.push([i, array[i]]);
+        animations.push([j, array[j]]);
+      }
       if (array[j] < array[min]) {
         min = j;
       }
     }
     // swap if the current index does not have the min val
+    animations.push([i, array[min]]);
+    animations.push([min, array[i]]);
     if (min !== i) {
       let temp = array[i];
       array[i] = array[min];
