@@ -74,16 +74,37 @@ function selectionSortHelper(array, len, animations) {
   return array;
 }
 
-export const bubbleSort = (array) => {
+
+
+export const getBubbleSortAnimations = (array) => {
+  const animations = [];
+  let len = array.length;
+  if (len <= 1) return array;
+  bubbleSortHelper(array, len, animations);
+  return animations;
+}
+
+function bubbleSortHelper(array, len, animations) {
   let swapped = true;
   do {
     swapped = false;
-    for (let i = 0; i < array.length; i++) {
-      if (array[i] > array[i + 1]) {
-        let temp = array[i];
-        array[i] = array[i + 1];
-        array[i + 1] = temp;
-        swapped = true;
+    for (let i = 0; i < len; i++) {
+      if ((i+1) !== len) {
+        animations.push([i, i+1]);
+        animations.push([i, i+1]);
+        if (array[i] > array[i + 1]) {
+          animations.push([i, array[i+1]]);
+          animations.push([i+1, array[i]]);
+  
+          let temp = array[i];
+          array[i] = array[i + 1];
+          array[i + 1] = temp;
+          swapped = true;
+          console.log("updated array: " + array);
+        } else {
+          animations.push([i, array[i]]);
+          animations.push([i+1, array[i+1]]);
+        }
       }
     }
   } while (swapped);
