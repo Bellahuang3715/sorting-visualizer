@@ -5,6 +5,7 @@ import {
   getInsertionSortAnimations,
   getSelectionSortAnimations,
   getBubbleSortAnimations,
+  getQuickSortAnimations,
 } from "../sortingAlgorithms/sortingAlgorithms";
 import "./SortingVisualizer.css";
 
@@ -174,13 +175,9 @@ export default class SortingVisualizer extends React.Component {
   }
 
   quickSort() {
-    // const javaScriptSortedArray = this.state.array.slice().sort((a, b) => a - b);
-    // const sortedArray = sortingAlgorithms.mergeSort(this.state.array);
-    // console.log(arraysAreEqual(javaScriptSortedArray, sortedArray));
+    const animations = getQuickSortAnimations(this.state.array);
+    console.log("quick sort animations: " + animations);
   }
-
-  //   heapSort() {}
-
 
   //   testSortingAlgorithms() {
   //     // create 100 arrays of random lengths
