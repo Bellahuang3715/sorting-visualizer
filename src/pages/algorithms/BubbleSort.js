@@ -1,10 +1,10 @@
 import React from 'react'
 import './BubbleSort.css'
-import { CodeBlock, CopyBlock, dracula } from "react-code-blocks";
+import { CopyBlock, dracula } from "react-code-blocks";
 import Tabs from '../../components/Tabs';
+import { BubbleSortItems } from '../../components/data/algorithms';
 
 const BubbleSort = () => {
-  const text = 'text goes here';
   return (
     <div className='bubble-sort-container'>
 
@@ -13,13 +13,10 @@ const BubbleSort = () => {
         <hr />
         <p><i>Description</i></p>
         <p>The <b>bubble sort</b> algorithms is a comparison-based sorting algorithm that compares each pair of adjacent elements, and swapping them if they are not in the correct order.</p>
-        <p><i>Analogies</i></p>
+        <p><i>Analogy</i></p>
         <ul>
           <li>
           Think of bubbles in sparkling water. The larger bubbles rises to the top faster, while the smaller ones rise slower. This is similar to bubble sort in the way that at each iteration in the algorithm, the largest element in the set gets 'pushed' to the back.
-          </li>
-          <li>
-          You are standing in a line 
           </li>
         </ul>
       </div>
@@ -34,7 +31,8 @@ const BubbleSort = () => {
       <div className="container-block">
         <h5 className="container-title">Pseudocode</h5>
         <CopyBlock
-          language='python'
+          className="codeblock"
+          language='text'
           text="print('GeeksforGeeks')"
           showLineNumbers='true'
           wrapLines
@@ -45,7 +43,7 @@ const BubbleSort = () => {
       
       <div className="container-block">
         <h5 className="container-title">Implementation in Different Languages</h5>
-        <Tabs />
+        <Tabs tabsItems={BubbleSortItems}/>
       </div>
 
       <div className="container-block">

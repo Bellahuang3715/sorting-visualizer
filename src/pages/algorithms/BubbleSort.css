@@ -9,3 +9,7 @@
 .container-title {
     margin-bottom: 1rem;
 }
+
+code {
+    color: white !important;
+}
