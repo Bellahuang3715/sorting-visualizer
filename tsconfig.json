@@ -12,7 +12,8 @@
       "noImplicitAny": true,
       "strictNullChecks": true,
       "allowJs": true,
-      "esModuleInterop": true
+      "esModuleInterop": true,
+      "suppressImplicitAnyIndexErrors": true,
     },
     "include": [
       "./src"
