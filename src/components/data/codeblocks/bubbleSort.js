@@ -33,8 +33,8 @@ void bubbleSort(int array[]) {
 	java: 
 `import java.util.Arrays;
 
-class Main {
-  static void bubbleSort(int array[]) {
+class BubbleSort {
+  void bubbleSort(int array[]) {
     int len = array.length;
     for (int i = 0; i < len - 1; i++) {
       for (int j = 0; j < (len - i - 1); j++) {
@@ -49,13 +49,13 @@ class Main {
 }`,
 	javascript: 
 `function bubbleSort(array) {
-  let len = array.length
+  let len = array.length;
   for (let i = 0; i < len; i++) {
     for (let j = 0; j < (len - i - 1); j++) {
       if (array[j] > array[j+1]) {
-        let temp = array[j]
-        array[j] = array[j+1]
-        array[j+1] = temp
+        let temp = array[j];
+        array[j] = array[j+1];
+        array[j+1] = temp;
       }
     }
   }
