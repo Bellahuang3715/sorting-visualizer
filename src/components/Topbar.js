@@ -51,7 +51,7 @@ function Topbar() {
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item as={Link} to={"/algorithms/comparison"}>
-                    Comparison
+                    Comparison Chart
                   </NavDropdown.Item>
                 </NavDropdown>
               </Nav>
@@ -69,7 +69,7 @@ function Topbar() {
           <Route path="/algorithms/selectionsort" element={<SelectionSort />} />
           <Route path="/algorithms/quicksort" element={<QuickSort />} />
           <Route path="/algorithms/bubblesort" element={<BubbleSort />} />
-          <Route path="/algorithms/bubblesort" element={<Comparison />} />
+          <Route path="/algorithms/comparison" element={<Comparison />} />
         </Routes>
       </div>
     </Router>

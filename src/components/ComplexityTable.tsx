@@ -23,10 +23,10 @@ const ComplexityTable: React.FC<TableProps> = ({ tableItems }: TableProps) => {
       <thead>
         <tr>
           <th>Algorithm</th>
-          <th>Time Complexity (Best Case)</th>
-          <th>Time Complexity (Average Case)</th>
-          <th>Time Complexity (Worst Case)</th>
-          <th>Space Complexity</th>
+          <th>Time Complexity (Best)</th>
+          <th>Time Complexity (Average)</th>
+          <th>Time Complexity (Worst)</th>
+          <th>Space Complexity (Worst)</th>
         </tr>
       </thead>
       <tbody>
